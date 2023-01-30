@@ -6,11 +6,9 @@ jobs:
   docker-release:
     name: Build and tag release
     runs-on: ubuntu-latest
-   
-      steps:
-        - id: checkout
-          name: Checkout
-          uses: actions/checkout@v2
 
-          
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v2
 
