@@ -15,5 +15,15 @@ jobs:
       - name: check docker
         id: tag
         run: docker ps
+
+      - name: Install .NET 7 SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.x.x
+
+      - name: Build
+        run: |
+          cd web
+          dotnet publish --os linux --arch x64 -c Release -p:PublishProfile=DefaultContainer
   
 
