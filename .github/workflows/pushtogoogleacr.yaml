@@ -12,3 +12,8 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
 
+      - name: check docker
+        id: tag
+        run: docker ps
+  
+
